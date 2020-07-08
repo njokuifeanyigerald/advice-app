@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-// import './app.css'
+import './app.css'
 import axios from 'axios'
 
 class App extends React.Component {
@@ -29,9 +29,17 @@ class App extends React.Component {
         const {advice} = this.state
         return(
            
-            <Fragment>
-                <h1>BlackLivesMatter</h1>
-                <h3>{advice}</h3>
+            <Fragment >
+                <div className="app">
+                    <div className="card">
+                        <h1 className="heading">BlackLivesMatter</h1>
+                        <h3 className="heading">{advice}</h3>
+                        <button className="button" onClick={this.fetchAdvice}>
+                            <span>Give Me an advice</span>
+                        </button>
+                    </div>
+
+                </div>
             </Fragment>
         )
     }
